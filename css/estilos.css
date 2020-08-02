@@ -1,0 +1,305 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+.title h4 {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.bg-orange {
+  background: #ff9f00;
+}
+
+.bg-red {
+  background: #FD5467;
+}
+
+.bg-green {
+  background: #52A589;
+}
+
+.bg-purple {
+  background: #724566;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  text-decoration: none;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 15% 1fr 25%;
+  grid-template-rows: 100vh;
+}
+@media (min-width: 300px) and (max-width: 400px) {
+  .container {
+    grid-template-columns: 15% 60% 25%;
+  }
+}
+.container .dashboard {
+  color: #fff;
+  background: #52a589;
+}
+.container .dashboard .head-title {
+  font-size: 19px;
+  font-weight: bold;
+}
+.container .dashboard .profile {
+  margin: 15px auto;
+  font-size: 14px;
+  padding: 0 20px;
+  font-weight: bold;
+}
+.container .dashboard .profile span {
+  font-size: 11px;
+  font-weight: normal;
+}
+.container .dashboard .menu .enlace {
+  transition: 0.2s ease all;
+  display: flex;
+  padding: 15px;
+}
+.container .dashboard .menu .enlace:hover {
+  border-radius: 10px;
+  cursor: pointer;
+  background: #f4f5f9;
+}
+.container .dashboard .menu .enlace:hover i,
+.container .dashboard .menu .enlace:hover a {
+  color: #000;
+}
+.container .dashboard .menu .enlace i {
+  margin-right: 12px;
+}
+.container .dashboard .menu .enlace a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.contenido {
+  display: grid;
+  display: flex;
+  flex-direction: column;
+}
+.contenido .header {
+  background: #f4f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+.contenido .header .titulo a {
+  color: #3d1d31;
+  font-weight: bold;
+  font-size: 18px;
+}
+.contenido .header .buscar input {
+  width: 500px;
+  border: none;
+  padding: 5px 20px;
+  border-radius: 3px;
+}
+.contenido .quick-access {
+  font-size: 12px;
+  padding: 10px;
+  background: #f4f5f9;
+}
+.contenido .quick-access .file-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+@media (min-width: 400px) and (max-width: 600px) {
+  .contenido .quick-access .file-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 300px) and (max-width: 400px) {
+  .contenido .quick-access .file-group {
+    grid-template-columns: 1fr;
+  }
+}
+.contenido .quick-access .file-group .file {
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contenido .quick-access .file-group .file .icons {
+  display: flex;
+  justify-content: space-between;
+}
+.contenido .quick-access .file-group .file .icons .fa-ellipsis-v {
+  font-size: 18px;
+}
+.contenido .quick-access .file-group .file .icons .fa-ellipsis-v:hover {
+  cursor: pointer;
+  color: #caca;
+}
+.contenido .quick-access .file-group .file i {
+  font-size: 25px;
+}
+.contenido .quick-access .file-group .file .info {
+  margin-top: 20px;
+}
+.contenido .quick-access .file-group .file .info p {
+  font-weight: bold;
+  color: #1f1b1e;
+}
+.contenido .quick-access .file-group .file .info span {
+  font-size: 10px;
+  color: #cacaca;
+}
+.contenido .folders {
+  font-size: 12px;
+}
+.contenido .folders .title {
+  background: #f4f5f9;
+  padding: 0 20px;
+}
+.contenido .folders .group-folders {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  background: #f4f5f9;
+}
+@media (min-width: 400px) and (max-width: 600px) {
+  .contenido .folders .group-folders {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 300px) and (max-width: 400px) {
+  .contenido .folders .group-folders {
+    grid-template-columns: 1fr;
+  }
+}
+.contenido .folders .group-folders .folder {
+  border-radius: 10px;
+  display: flex;
+  background: #fff;
+  align-items: center;
+}
+.contenido .folders .group-folders .folder:hover, .contenido .folders .group-folders .folder.active {
+  cursor: pointer;
+}
+.contenido .folders .group-folders .folder:hover .far, .contenido .folders .group-folders .folder.active .far {
+  color: #ff9f00;
+}
+.contenido .folders .group-folders .folder .far {
+  font-size: 25px;
+  padding: 20px;
+}
+.contenido .activity {
+  background: #f4f5f9;
+  padding: 20px;
+}
+.contenido .activity .archivo {
+  border-radius: 15px;
+  margin: 15px 0px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  font-size: 14px;
+}
+.contenido .activity .archivo .kind,
+.contenido .activity .archivo .date {
+  font-size: 13px;
+  color: #cacaca;
+}
+
+.informacion {
+  background: #eceff8;
+  padding: 20px;
+}
+.informacion hr {
+  margin: 20px 0;
+  color: #cacaca;
+}
+.informacion .info-header {
+  display: flex;
+  justify-content: space-between;
+}
+.informacion .info-header .iconos {
+  align-self: center;
+  font-size: 14px;
+}
+.informacion .info-header .iconos:hover {
+  cursor: pointer;
+}
+.informacion .info-header .perfil {
+  display: flex;
+}
+.informacion .info-header .perfil p {
+  align-self: center;
+  font-size: 14px;
+}
+.informacion .info-header .perfil img {
+  margin-left: 20px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.informacion .info-header .perfil:hover {
+  cursor: pointer;
+}
+.informacion .tipo {
+  display: flex;
+  padding: 5px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.informacion .tipo .icono {
+  border-radius: 15px;
+}
+.informacion .tipo .icono:hover {
+  cursor: pointer;
+}
+.informacion .tipo .icono .fas,
+.informacion .tipo .icono .far {
+  color: white;
+  padding: 15px;
+  font-size: 15px;
+}
+.informacion .tipo .name {
+  font-weight: normal;
+  font-size: 14px;
+}
+.informacion .tipo .name span {
+  font-size: 11px;
+  color: #cacaca;
+}
+.informacion .tipo .espacio {
+  background: #fff;
+  padding: 5px;
+  font-size: 11px;
+  color: #cacaca;
+  border-radius: 5px;
+}
+.informacion .boton {
+  display: block;
+  margin: auto;
+  background: #ff9f00;
+  border: none;
+  font-size: 18px;
+  padding: 20px 50px;
+  color: #fff;
+  border-radius: 10px;
+}
+.informacion .boton:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=estilos.css.map */

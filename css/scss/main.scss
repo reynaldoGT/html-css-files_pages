@@ -1,0 +1,295 @@
+@import "variables";
+@import "share";
+@import "media";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    text-decoration: none;
+}
+.container {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 15% 1fr 25%;
+    //todo
+    grid-template-rows: 100vh;
+    @include media(sm) {
+        grid-template-columns: 15% 60% 25%;
+    }
+
+    .dashboard {
+        color: #fff;
+        background: $verde;
+        .head-title {
+            font-size: 19px;
+            font-weight: bold;
+        }
+        .profile {
+            margin: 15px auto;
+            font-size: 14px;
+            padding: 0 20px;
+            font-weight: bold;
+            span {
+                font-size: 11px;
+                font-weight: normal;
+            }
+        }
+
+        .menu {
+            .enlace {
+                transition: 0.2s ease all;
+                &:hover {
+                    border-radius: 10px;
+                    cursor: pointer;
+                    background: $enlace-hover;
+                    i,
+                    a {
+                        color: #000;
+                    }
+                }
+                display: flex;
+                i {
+                    margin-right: 12px;
+                }
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: normal;
+                    font-size: 12px;
+                }
+
+                padding: 15px;
+            }
+        }
+    }
+}
+.contenido {
+    display: grid;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        background: $enlace-hover;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        .titulo {
+            a {
+                color: #3d1d31;
+                font-weight: bold;
+                font-size: 18px;
+            }
+        }
+        .buscar {
+            input {
+                width: 500px;
+                border: none;
+                padding: 5px 20px;
+                border-radius: 3px;
+            }
+        }
+    }
+    .quick-access {
+        font-size: 12px;
+        padding: 10px;
+        background: #f4f5f9;
+
+        .file-group {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            @include media(md) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @include media(sm) {
+                grid-template-columns: 1fr;
+            }
+            gap: 15px;
+
+            .file {
+                .icons {
+                    display: flex;
+                    justify-content: space-between;
+                    .fa-ellipsis-v {
+                        font-size: 18px;
+                        &:hover {
+                            cursor: pointer;
+                            color: #caca;
+                        }
+                    }
+                }
+                border-radius: 10px;
+                background: #fff;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                i {
+                    font-size: $folders_size;
+                }
+
+                .info {
+                    margin-top: 20px;
+                    p {
+                        font-weight: bold;
+                        color: #1f1b1e;
+                    }
+                    span {
+                        font-size: 10px;
+                        color: #cacaca;
+                    }
+                }
+            }
+        }
+    }
+    .folders {
+        font-size: 12px;
+
+        .title {
+            background: $enlace-hover;
+            padding: 0 20px;
+        }
+        .group-folders {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            //Todo
+            @include media(md) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include media(sm) {
+                grid-template-columns: 1fr;
+            }
+
+            gap: 15px;
+            // grid-template-rows: 500px;
+            background: $enlace-hover;
+            .folder {
+                border-radius: 10px;
+                &:hover,
+                &.active {
+                    cursor: pointer;
+                    .far {
+                        color: $naranja;
+                    }
+                }
+                display: flex;
+                background: #fff;
+                align-items: center;
+                .far {
+                    font-size: $folders_size;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+    .activity {
+        background: $enlace-hover;
+        padding: 20px;
+        .archivo {
+            border-radius: 15px;
+            margin: 15px 0px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            background: #fff;
+            font-size: 14px;
+            .name {
+            }
+            .kind,
+            .date {
+                font-size: 13px;
+                color: #cacaca;
+            }
+        }
+    }
+}
+.informacion {
+    background: $fondo_info;
+    padding: 20px;
+    hr {
+        margin: 20px 0;
+        color: #cacaca;
+    }
+    .info-header {
+        display: flex;
+        justify-content: space-between;
+        .iconos {
+            align-self: center;
+            font-size: 14px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .perfil {
+            display: flex;
+
+            p {
+                align-self: center;
+                font-size: 14px;
+            }
+            img {
+                margin-left: 20px;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .tipo {
+        display: flex;
+        padding: 5px;
+        justify-content: space-evenly;
+        align-items: center;
+        .icono {
+            &:hover {
+                cursor: pointer;
+            }
+            border-radius: 15px;
+            .fas,
+            .far {
+                color: white;
+                padding: 15px;
+                font-size: 15px;
+            }
+        }
+        .name {
+            font-weight: normal;
+            font-size: 14px;
+            span {
+                font-size: 11px;
+                color: #cacaca;
+            }
+        }
+        .espacio {
+            background: #fff;
+            padding: 5px;
+            font-size: 11px;
+            color: #cacaca;
+            border-radius: 5px;
+        }
+    }
+
+    .boton {
+        display: block;
+        margin: auto;
+        background: $naranja;
+        border: none;
+        font-size: 18px;
+        padding: 20px 50px;
+        color: #fff;
+        border-radius: 10px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@import "media";

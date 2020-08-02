@@ -1,0 +1,25 @@
+.title {
+    
+    display: flex;
+    justify-content: space-between;
+    
+    
+    h4{
+        font-weight: normal;
+        font-size: 14px;
+    }
+}
+
+.bg-orange{
+    background: $naranja;
+}
+
+.bg-red{
+    background:$red;
+}
+.bg-green{
+    background:$green;
+}
+.bg-purple{
+    background:$purple;
+}

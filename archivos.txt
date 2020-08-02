@@ -1,0 +1,17 @@
+home= <i class="fas fa-home"></i>
+folder close = <i class="far fa-folder"></i>
+folder open = <i class="far fa-folder-open"></i>
+shared = <i class="fas fa-share-square"></i>
+trash = <i class="far fa-trash-alt"></i>
+folder plus = <i class="fas fa-folder-plus"></i>
+folder minus = <i class="fas fa-folder-minus"></i>
+
+//Menu icons
+menu 3 points = <i class="fas fa-ellipsis-v"></i>
+hamburger = <i class="fas fa-bars"></i>
+
+zip = <i class="fas fa-file-archive"></i>
+
+task =<i class="fas fa-tasks"></i>
+
+image = <i class="fas fa-image"></i>
