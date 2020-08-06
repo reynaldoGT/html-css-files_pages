@@ -17,12 +17,21 @@
 
     grid-template-rows: 100vh;
     @include media(sm) {
-        grid-template-columns: 20% 1fr;
+        grid-template-columns: 1fr;
+        position: relative;
     }
 
     .dashboard {
         @include media(sm) {
-            grid-template-columns: 20% 1fr;
+            transform: translate(-100%);
+            position: absolute;
+            opacity: 0.9;
+            transition: 0.3s ease all;
+            height: 100vh;
+        }
+        &.active {
+            display: block;
+            transform: translate(-0%);
         }
         color: #fff;
         background: $verde;
@@ -32,9 +41,12 @@
             font-weight: bold;
             padding: 10px 20px;
 
-            @include media(xs) {
-                font-size: 13px;
-                padding: 0;
+            @include media(sm) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 16px;
+                padding: 20px;
             }
         }
         .profile {
@@ -51,12 +63,16 @@
         .menu {
             .enlace {
                 transition: 0.3s ease all;
+
                 @include media(sm) {
-                    i {
-                        font-size: 30px;
-                    }
-                    a {
-                        display: none;
+                    &:hover {
+                        border-radius: 0px;
+                        cursor: pointer;
+                        background: $enlace-hover;
+                        i,
+                        a {
+                            color: #000;
+                        }
                     }
                 }
                 &:hover {
@@ -96,10 +112,19 @@
         align-items: center;
         padding: 10px 15px;
         .titulo {
+            @include media(sm) {
+                display: flex;
+            }
             a {
+                margin: 0px 10px;
                 color: #3d1d31;
                 font-weight: bold;
                 font-size: 18px;
+
+                @include media(sm) {
+                    display: block;
+                    font-size: 14px;
+                }
             }
         }
         .buscar {
@@ -112,6 +137,11 @@
         }
     }
     .quick-access {
+        .title {
+            h4 {
+                margin: 10px 0;
+            }
+        }
         font-size: 12px;
         padding: 10px;
         background: #f4f5f9;
@@ -276,8 +306,9 @@
     .tipo {
         display: flex;
         padding: 5px;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
+        align-content: center;
 
         @include media(sm) {
             padding: 0;
@@ -285,6 +316,7 @@
             margin: 10px 0;
         }
         .icono {
+            margin-right: 5px;
             &:hover {
                 cursor: pointer;
             }
@@ -299,6 +331,10 @@
         .name {
             font-weight: normal;
             font-size: 14px;
+            .title-square {
+                color: #444;
+                font-size: 14px;
+            }
             span {
                 font-size: 11px;
                 color: #cacaca;
@@ -312,8 +348,6 @@
             border-radius: 5px;
         }
     }
-
-    
 }
 
 .container-info-folders {
