@@ -1,3 +1,6 @@
+//? para hacer correr
+// ? sass --watch css\scss\main.scss:../estilos.css/
+
 @import "variables";
 @import "share";
 @import "media";
@@ -12,6 +15,7 @@
 .container {
     width: 95%;
     margin: auto;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: 20% 1fr;
 
@@ -106,33 +110,49 @@
     flex-direction: column;
 
     .header {
+        padding-top: 16px;
         background: $enlace-hover;
         display: flex;
+        // padding: 10px;
         justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
+        padding: 10px;
+
+        @include media(sm) {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+
+            
+        }
         .titulo {
-            @include media(sm) {
-                display: flex;
-            }
+            display: flex;
+            width: 100%;
+            
             a {
-                margin: 0px 10px;
+                text-transform: uppercase;
                 color: #3d1d31;
                 font-weight: bold;
                 font-size: 18px;
 
                 @include media(sm) {
                     display: block;
-                    font-size: 14px;
+                    font-size: 16px;
+                    margin-left: 16px;
+                    
                 }
             }
         }
         .buscar {
             input {
-                width: 80%;
+                width: 350px;
                 border: none;
                 padding: 5px 20px;
                 border-radius: 3px;
+                @include media(sm) {
+                    width: 100%;
+                    padding: 5px 10px;
+                    
+                }
             }
         }
     }
@@ -153,7 +173,7 @@
                 grid-template-columns: repeat(3, 1fr);
             }
             @include media(sm) {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
             @include media(xm) {
                 grid-template-columns: 1fr;
@@ -239,7 +259,7 @@
     }
     .activity {
         background: $enlace-hover;
-        padding: 20px;
+        padding: 10px;
         .archivo {
             border-radius: 15px;
             margin: 15px 0px;
@@ -249,11 +269,17 @@
             background: #fff;
             font-size: 14px;
             .name {
+                @include media(sm) {
+                    font-size: 10px;
+                }
             }
             .kind,
             .date {
                 font-size: 13px;
                 color: #cacaca;
+                @include media(sm) {
+                    font-size: 10px;
+                }
             }
         }
     }
@@ -285,6 +311,9 @@
             }
         }
         .perfil {
+            @include media(sm) {
+                display: none;
+            }
             display: flex;
 
             p {
@@ -332,6 +361,7 @@
             font-weight: normal;
             font-size: 14px;
             .title-square {
+                text-transform: capitalize;
                 color: #444;
                 font-size: 14px;
             }

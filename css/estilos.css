@@ -39,7 +39,7 @@
 }
 @media (min-width: 320px) and (max-width: 768PX) {
   .boton {
-    margin: 10px 0;
+    margin: 20px 0;
     border-radius: 8px;
     font-size: 14px;
     padding: 10px 25px;
@@ -68,6 +68,7 @@
 .container {
   width: 95%;
   margin: auto;
+  max-width: 1200px;
   display: grid;
   grid-template-columns: 20% 1fr;
   grid-template-rows: 100vh;
@@ -160,19 +161,25 @@
   flex-direction: column;
 }
 .contenido .header {
+  padding-top: 16px;
   background: #f4f5f9;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
+  padding: 10px;
 }
 @media (min-width: 320px) and (max-width: 768PX) {
-  .contenido .header .titulo {
+  .contenido .header {
     display: flex;
+    justify-content: space-between;
+    padding: 10px;
   }
 }
+.contenido .header .titulo {
+  display: flex;
+  width: 100%;
+}
 .contenido .header .titulo a {
-  margin: 0px 10px;
+  text-transform: uppercase;
   color: #3d1d31;
   font-weight: bold;
   font-size: 18px;
@@ -180,14 +187,21 @@
 @media (min-width: 320px) and (max-width: 768PX) {
   .contenido .header .titulo a {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
+    margin-left: 16px;
   }
 }
 .contenido .header .buscar input {
-  width: 80%;
+  width: 350px;
   border: none;
   padding: 5px 20px;
   border-radius: 3px;
+}
+@media (min-width: 320px) and (max-width: 768PX) {
+  .contenido .header .buscar input {
+    width: 100%;
+    padding: 5px 10px;
+  }
 }
 .contenido .quick-access {
   font-size: 12px;
@@ -209,7 +223,7 @@
 }
 @media (min-width: 320px) and (max-width: 768PX) {
   .contenido .quick-access .file-group {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 .contenido .quick-access .file-group .file {
@@ -287,7 +301,7 @@
 }
 .contenido .activity {
   background: #f4f5f9;
-  padding: 20px;
+  padding: 10px;
 }
 .contenido .activity .archivo {
   border-radius: 15px;
@@ -298,10 +312,21 @@
   background: #fff;
   font-size: 14px;
 }
+@media (min-width: 320px) and (max-width: 768PX) {
+  .contenido .activity .archivo .name {
+    font-size: 10px;
+  }
+}
 .contenido .activity .archivo .kind,
 .contenido .activity .archivo .date {
   font-size: 13px;
   color: #cacaca;
+}
+@media (min-width: 320px) and (max-width: 768PX) {
+  .contenido .activity .archivo .kind,
+.contenido .activity .archivo .date {
+    font-size: 10px;
+  }
 }
 
 .informacion {
@@ -336,6 +361,11 @@
 }
 .informacion .info-header .perfil {
   display: flex;
+}
+@media (min-width: 320px) and (max-width: 768PX) {
+  .informacion .info-header .perfil {
+    display: none;
+  }
 }
 .informacion .info-header .perfil p {
   align-self: center;
@@ -382,6 +412,7 @@
   font-size: 14px;
 }
 .informacion .tipo .name .title-square {
+  text-transform: capitalize;
   color: #444;
   font-size: 14px;
 }
