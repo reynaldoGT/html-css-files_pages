@@ -1,25 +1,47 @@
+@import "media";
+
 .title {
-    
     display: flex;
     justify-content: space-between;
-    
-    
-    h4{
+
+    h4 {
         font-weight: normal;
         font-size: 14px;
     }
 }
 
-.bg-orange{
+.bg-orange {
     background: $naranja;
 }
 
-.bg-red{
-    background:$red;
+.bg-red {
+    background: $red;
 }
-.bg-green{
-    background:$green;
+.bg-green {
+    background: $green;
 }
-.bg-purple{
-    background:$purple;
+.bg-purple {
+    background: $purple;
+}
+
+.boton {
+    display: block;
+    margin: auto;
+    background: $naranja;
+    border: none;
+    font-size: 18px;
+    padding: 20px 50px;
+    color: #fff;
+    border-radius: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include media(sm) {
+        margin: 10px 0;
+        border-radius: 8px;
+        font-size: 14px;
+        padding: 10px 25px;
+        width: 100%;
+    }
 }

@@ -13,19 +13,29 @@
     width: 95%;
     margin: auto;
     display: grid;
-    grid-template-columns: 15% 1fr 25%;
-    //todo
+    grid-template-columns: 20% 1fr;
+
     grid-template-rows: 100vh;
     @include media(sm) {
-        grid-template-columns: 15% 60% 25%;
+        grid-template-columns: 20% 1fr;
     }
 
     .dashboard {
+        @include media(sm) {
+            grid-template-columns: 20% 1fr;
+        }
         color: #fff;
         background: $verde;
+
         .head-title {
             font-size: 19px;
             font-weight: bold;
+            padding: 10px 20px;
+
+            @include media(xs) {
+                font-size: 13px;
+                padding: 0;
+            }
         }
         .profile {
             margin: 15px auto;
@@ -40,7 +50,15 @@
 
         .menu {
             .enlace {
-                transition: 0.2s ease all;
+                transition: 0.3s ease all;
+                @include media(sm) {
+                    i {
+                        font-size: 30px;
+                    }
+                    a {
+                        display: none;
+                    }
+                }
                 &:hover {
                     border-radius: 10px;
                     cursor: pointer;
@@ -86,7 +104,7 @@
         }
         .buscar {
             input {
-                width: 500px;
+                width: 80%;
                 border: none;
                 padding: 5px 20px;
                 border-radius: 3px;
@@ -105,6 +123,9 @@
                 grid-template-columns: repeat(3, 1fr);
             }
             @include media(sm) {
+                grid-template-columns: 1fr;
+            }
+            @include media(xm) {
                 grid-template-columns: 1fr;
             }
             gap: 15px;
@@ -161,7 +182,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             @include media(sm) {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
 
             gap: 15px;
@@ -210,6 +231,15 @@
 .informacion {
     background: $fondo_info;
     padding: 20px;
+    @include media(sm) {
+        padding: 10px;
+    }
+    .title {
+        margin: 20px 0;
+        font-weight: bold;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
     hr {
         margin: 20px 0;
         color: #cacaca;
@@ -248,6 +278,12 @@
         padding: 5px;
         justify-content: space-evenly;
         align-items: center;
+
+        @include media(sm) {
+            padding: 0;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
         .icono {
             &:hover {
                 cursor: pointer;
@@ -277,19 +313,12 @@
         }
     }
 
-    .boton {
-        display: block;
-        margin: auto;
-        background: $naranja;
-        border: none;
-        font-size: 18px;
-        padding: 20px 50px;
-        color: #fff;
-        border-radius: 10px;
-        &:hover {
-            cursor: pointer;
-        }
-    }
+    
 }
 
-@import "media";
+.container-info-folders {
+    display: flex;
+    @include media(sm) {
+        flex-direction: column;
+    }
+}

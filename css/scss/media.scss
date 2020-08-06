@@ -1,6 +1,6 @@
-$breakpoint-sm: 300px;
-$breakpoint-md: 400px;
-$breakpoint-lg: 600px;
+$breakpoint-sm: 320px;
+$breakpoint-md: 768PX;
+$breakpoint-lg: 1024PX;
 
 @mixin media($media) {
     @if $media == xs {
@@ -21,4 +21,3 @@ $breakpoint-lg: 600px;
         }
     }
 }
-
