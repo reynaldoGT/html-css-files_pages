@@ -2,6 +2,7 @@
 window.addEventListener('load', () => {
     render();
     hover_active();
+    menu_responsive();
 })
 
 
@@ -96,20 +97,38 @@ const hover_active = () => {
     console.log(folders);
     folders.forEach(folder => {
         folder.addEventListener('click', () => {
-            
+
             const file = folder.childNodes[1]
             if (!open) {
 
-                file.classList.remove(["far"],["fa-folder"])
+                file.classList.remove(["far"], ["fa-folder"])
                 file.classList.add('far', 'fa-folder-open');
                 file.style.color = '#FF9F00';
                 open = true;
-            }else{
-                file.classList.remove(["far"],["fa-folder-open"])
-                file.classList.add('far','fa-folder')
+            } else {
+                file.classList.remove(["far"], ["fa-folder-open"])
+                file.classList.add('far', 'fa-folder')
                 file.style.color = '#000';
                 open = false;
             }
         })
+    })
+}
+
+
+
+const menu_responsive = () => {
+    const menu_hidden = document.querySelector('#menu-hidden');
+    const menu_show = document.querySelector('#menu-show');
+    
+    const dashboard = document.querySelector('#dashboard');
+    
+    
+    menu_hidden.addEventListener('click', e => {
+        dashboard.classList.toggle('active');
+    })
+    menu_show.addEventListener('click', e => {
+        dashboard.classList.toggle('active');
+
     })
 }

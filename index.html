@@ -11,9 +11,14 @@
 
 <body>
     <div class="container">
-        <div class="dashboard">
+
+
+        <div class="dashboard" id="dashboard">
             <div class="head-title">
-                CloudFiles
+                <span>
+                    CloudFiles
+                </span>
+                <i class="fas fa-chevron-left menu-responsive" id="menu-hidden"></i>
             </div>
             <div class="profile">
                 Hello, mi Yuki :)
@@ -21,7 +26,8 @@
             </div>
             <div class="menu">
                 <div class="enlace">
-                    <i class="fas fa-home"></i><a href="#">Dashboard</a>
+                    <i class="fas fa-home"></i>
+                    <a href="#">Dashboard</a>
                 </div>
                 <div class="enlace">
                     <i class="far fa-folder"></i><a href="#">My files</a>
@@ -40,151 +46,180 @@
                 </div>
             </div>
         </div>
-        <div class="contenido">
 
-            <div class="header">
-                <div class="titulo">
-                    <a href="#">My storage</a>
-                </div>
-                <div class="buscar">
-                    <input type="text" placeholder="Find your files">
-                </div>
-            </div>
-            <div class="quick-access">
-                <div class="title">
-                    <h4>Quick Access</h4>
-                    <div class="icons">
-                        <i class="fas fa-ellipsis-v"></i>
-                        <i class="fas fa-bars"></i>
+
+        <div class="container-info-folders">
+
+            <div class="contenido">
+                <div class="header">
+                    <div class="titulo">
+                        <i class="fas fa-bars menu-responsive" id="menu-show"></i>
+                        <a href="#">My storage</a>
+                    </div>
+                    <div class="buscar">
+                        <input type="text" placeholder="Find your files">
                     </div>
                 </div>
-                <!-- Creacion de los grupos de carpetas con js   -->
-                <div class="file-group" id="file-group">
-                    
-                </div>
-            </div>
-            <div class="folders">
-                <div class="title">
-                    <h4>Folder</h4>
-                    <div class="icons">
-                        <i class="fas fa-ellipsis-v"></i>
-                        <i class="fas fa-bars"></i>
+                <div class="quick-access">
+                    <div class="title">
+                        <h4>Quick Access</h4>
+                        <div class="icons">
+                            <i class="fas fa-ellipsis-v"></i>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                    <!-- Creacion de los grupos de carpetas con js   -->
+                    <div class="file-group" id="file-group">
+
                     </div>
                 </div>
-                <div class="group-folders" id="group_folders">
-                    
-                </div>
-            </div>
-            <div class="activity">
-                <div class="title">
-                    <h4>Activity</h4>
-                    <div class="icons">
-                        <i class="fas fa-ellipsis-v"></i>
-                        <i class="fas fa-bars"></i>
+
+
+                <div class="folders">
+                    <div class="title">
+                        <h4>Folder</h4>
+                        <div class="icons">
+                            <i class="fas fa-ellipsis-v"></i>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                    <div class="group-folders" id="group_folders">
+
                     </div>
                 </div>
-                <div class="archivo">
+
+                <div class="activity">
+                    <div class="title">
+                        <h4>Activity</h4>
+                        <div class="icons">
+                            <i class="fas fa-ellipsis-v"></i>
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                    <div class="archivo">
+
+                        <div class="name">
+                            <p><i class="fas fa-file-archive"></i> &nbsp; azzura_Logo.zip</p>
+                        </div>
+                        <div class="kind">
+                            Document
+                        </div>
+                        <div class="date">
+                            April 18,2000
+                        </div>
+                        <i class="fas fa-ellipsis-v"></i>
+
+                    </div>
+                    <div class="archivo">
+
+                        <div class="name">
+                            <p><i class="fas fa-file-archive"></i> &nbsp; azzura_Logo.zip</p>
+                        </div>
+                        <div class="kind">
+                            Document
+                        </div>
+                        <div class="date">
+                            April 18,2000
+                        </div>
+                        <i class="fas fa-ellipsis-v"></i>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="informacion">
+
+                <div class="info-header">
+                    <div class="iconos">
+                        <i class="fas fa-tasks"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div class="perfil">
+                        <p>My Judi</p>
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                    </div>
+                </div>
+                <hr>
+
+
+                <div class="title">
+                    <p>Storage</p>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+                <div class="tipo">
+
+                    <div class="icono bg-orange">
+                        <i class="fas fa-video"></i>
+                    </div>
 
                     <div class="name">
-                        azzura_Logo.zip
+                        <span class="title-square">
+                            video Files
+                        </span>
+                        <br><span>52 Files</span>
                     </div>
-                    <div class="kind">
-                        Document
+                    <div class="espacio">
+                        211 GB
                     </div>
-                    <div class="date">
-                        April 18,2000
-                    </div>
-                    <i class="fas fa-ellipsis-v"></i>
-
+                    
                 </div>
-                <div class="archivo">
 
+
+
+
+                <div class="tipo">
+
+                    <div class="icono bg-red">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
                     <div class="name">
-                        
-                        <p><i class="fas fa-file-archive"></i> &nbsp; azzura_Logo.zip</p>
+                        <span class="title-square">
+                            Document
+                        </span>
+                        <br><span>1800 Files</span>
                     </div>
-                    <div class="kind">
-                        Document
+                    <div class="espacio">
+                        109 GB
                     </div>
-                    <div class="date">
-                        April 18,2000
-                    </div>
-                    <i class="fas fa-ellipsis-v"></i>
-
                 </div>
+                <div class="tipo">
+                    <div class="icono bg-green">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="name">
+                        <span class="title-square">
+                            video Files
+                        </span>
+
+                        <br><span>5220 Files</span>
+                    </div>
+                    <div class="espacio">
+                        10gb
+                    </div>
+                </div>
+                <div class="tipo">
+                    <div class="icono bg-purple">
+                        <i class="far fa-folder"></i>
+                    </div>
+                    <div class="name">
+                        <span class="title-square">
+                            Free Space
+                        </span>
+                        <br><span>Available</span>
+                    </div>
+                    <div class="espacio">
+                        500gb
+                    </div>
+                </div>
+
+                <button class="boton">
+                    Upgrade Account
+                </button>
             </div>
         </div>
-        <div class="informacion">
-            <div class="info-header">
-                <div class="iconos">
-                    <i class="fas fa-tasks"></i>
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-                <div class="perfil">
-                    <p>My Judi</p>
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-                </div>
-            </div>
-            <hr>
-            <div class="title">
-                <p>Storage</p>
-                <i class="fas fa-ellipsis-v"></i>
-            </div>
-            <div class="tipo">
-                <div class="icono bg-orange">
-                    <i class="fas fa-video"></i>
-                </div>
-                <div class="name">
-                    video Files
-                    <br><span>52 Files</span>
-                </div>
-                <div class="espacio">
-                    211 GB
-                </div>
-            </div>
-            <div class="tipo">
-                <div class="icono bg-red">
-                    <i class="fas fa-file-alt"></i>
-                </div>
-                <div class="name">
-                    Document
-                    <br><span>1800 Files</span>
-                </div>
-                <div class="espacio">
-                    109 GB
-                </div>
-            </div>
-            <div class="tipo">
-                <div class="icono bg-green">
-                    <i class="fas fa-image"></i>
-                </div>
-                <div class="name">
-                    Images
-                    <br><span>5220 Files</span>
-                </div>
-                <div class="espacio">
-                    10gb
-                </div>
-            </div>
-            <div class="tipo">
-                <div class="icono bg-purple">
-                    <i class="far fa-folder"></i>
-                </div>
-                <div class="name">
-                    Free Space
-                    <br><span>Available</span>
-                </div>
-                <div class="espacio">
-                    500gb
-                </div>
-            </div>
 
-            <button class="boton">
-                Upgrade Account
-            </button>
-        </div>
     </div>
-
 
     </div>
     <script src="js/main.js"></script>
